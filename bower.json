@@ -13,6 +13,9 @@
     "languages"
   ],
   "homepage": "",
+  "dependencies": {
+    "query-string": "^5.0.0"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
