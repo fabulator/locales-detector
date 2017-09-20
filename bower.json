@@ -1,0 +1,27 @@
+{
+  "name": "locales-detector",
+  "description": "Tool for detecting locales of visitors and transform them.",
+  "main": "dist/locales-detector.js",
+  "authors": [
+    "Michal Ozogan <michal@ozogan.eu>"
+  ],
+  "repository": "https://github.com/fabulator/locales-detector.git",
+  "license": "Apache-2.0",
+  "keywords": [
+    "locale",
+    "locales",
+    "languages"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "karma.conf.js",
+    "package.json",
+    "rollup.js",
+    ".travis.yml"
+  ]
+}
