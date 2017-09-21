@@ -203,6 +203,34 @@ var possibleConstructorReturn = function (self, call) {
   return call && (typeof call === "object" || typeof call === "function") ? call : self;
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var toConsumableArray = function (arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) arr2[i] = arr[i];
+
+    return arr2;
+  } else {
+    return Array.from(arr);
+  }
+};
+
 /**
  * Transformer are used to change format of locale (eg. convert it to uppercase), create fallbacks or delete invalid items.
  */
@@ -377,6 +405,96 @@ var LanguageOnlyTransformer = function (_Transformer) {
 }(Transformer);
 
 /**
+ * This transformer allows you to append default locale.
+ */
+
+var DefaultLocaleTransformer = function (_Transformer) {
+    inherits(DefaultLocaleTransformer, _Transformer);
+
+    /**
+     * Constructor.
+     *
+     * @param {string} defaultLocale - set default locale
+     */
+    function DefaultLocaleTransformer(defaultLocale) {
+        classCallCheck(this, DefaultLocaleTransformer);
+
+        var _this = possibleConstructorReturn(this, (DefaultLocaleTransformer.__proto__ || Object.getPrototypeOf(DefaultLocaleTransformer)).call(this));
+
+        _this.defaultLocale = defaultLocale;
+        return _this;
+    }
+    /**
+     * Add default locale to end of array
+     *
+     * @param {Array<string>} locales - list of locales
+     * @returns {Array<string>} locales with default
+     */
+
+
+    createClass(DefaultLocaleTransformer, [{
+        key: 'transform',
+        value: function transform(locales) {
+            return [].concat(toConsumableArray(locales.map(function (locale) {
+                var splitedLocale = locale.split('-');
+                return splitedLocale.map(function (value, index) {
+                    var localeGenerator = [];
+                    for (var i = 0; i <= index; i++) {
+                        localeGenerator.push(splitedLocale[i]);
+                    }
+                    return localeGenerator.join('-');
+                }).reverse();
+            }).reduce(function (a, b) {
+                return a.concat(b);
+            }, [])), [this.defaultLocale]);
+        }
+    }]);
+    return DefaultLocaleTransformer;
+}(Transformer);
+
+/**
+ * This transformer allows you to filter locales
+ */
+
+var AllowOnlyTransformer = function (_Transformer) {
+    inherits(AllowOnlyTransformer, _Transformer);
+
+    /**
+     * Constructor.
+     *
+     * @param {Array<string>} allowedLocales - list of allowed locales
+     */
+    function AllowOnlyTransformer(allowedLocales) {
+        classCallCheck(this, AllowOnlyTransformer);
+
+        var _this = possibleConstructorReturn(this, (AllowOnlyTransformer.__proto__ || Object.getPrototypeOf(AllowOnlyTransformer)).call(this));
+
+        _this.allowedLocales = allowedLocales;
+        return _this;
+    }
+
+    /**
+     * Return only allowed locales.
+     *
+     * @param {Array<string>} locales - list of locales
+     * @returns {Array<string>} allowed locales
+     */
+
+
+    createClass(AllowOnlyTransformer, [{
+        key: 'transform',
+        value: function transform(locales) {
+            var _this2 = this;
+
+            return locales.filter(function (locale) {
+                return _this2.allowedLocales.indexOf(locale) >= 0;
+            });
+        }
+    }]);
+    return AllowOnlyTransformer;
+}(Transformer);
+
+/**
  * Detector classes obtain list of user's locales. It can be from browser, url, cookies, storage, ... whatever you want
  * Get locales method always return array of locales.
  */
@@ -492,20 +610,23 @@ var LocaleResolver = function () {
         var transformers = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
         classCallCheck(this, LocaleResolver);
 
-        this.detectors = detectors;
+        this.locales = detectors.map(function (detector) {
+            return detector.getLocales();
+        }).reduce(function (a, b) {
+            return a.concat(b);
+        }, []);
+
         this.transformers = transformers;
     }
 
     createClass(LocaleResolver, [{
         key: 'getLocales',
         value: function getLocales() {
-            var locales = this.detectors.map(function (detector) {
-                return detector.getLocales();
-            }).reduce(function (a, b) {
-                return a.concat(b);
-            }, []);
+            var transformers = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 
-            this.transformers.forEach(function (transformer) {
+            var locales = this.locales;
+
+            [].concat(toConsumableArray(this.transformers), toConsumableArray(transformers)).forEach(function (transformer) {
                 locales = transformer.transform(locales);
             });
 
@@ -521,6 +642,8 @@ exports.FallbacksTransformer = FallbacksTransformer;
 exports.IETFTransformer = IETFTransformer;
 exports.InvalidLocalesTransformer = InvalidLocalesTransformer;
 exports.LanguageOnlyTransformer = LanguageOnlyTransformer;
+exports.DefaultLocaleTransformer = DefaultLocaleTransformer;
+exports.AllowOnlyTransformer = AllowOnlyTransformer;
 exports.NavigatorDetector = NavigatorDetector;
 exports.UrlDetector = UrlDetector;
 exports.LocaleResolver = LocaleResolver;
