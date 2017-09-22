@@ -599,6 +599,43 @@ var UrlDetector = function (_Detector) {
     return UrlDetector;
 }(Detector);
 
+/**
+ * With FromListDetector you can set locales by your own.
+ */
+
+var FromListDetector = function (_Detector) {
+  inherits(FromListDetector, _Detector);
+
+  /**
+   * On default languages are loaded from window.navigator
+   *
+   * @param {Array<string>} locales - list of locales
+   */
+  function FromListDetector(locales) {
+    classCallCheck(this, FromListDetector);
+
+    var _this = possibleConstructorReturn(this, (FromListDetector.__proto__ || Object.getPrototypeOf(FromListDetector)).call(this));
+
+    _this.locales = locales;
+    return _this;
+  }
+
+  /**
+   * Get list of locales.
+   *
+   * @returns {Array<string>}
+   */
+
+
+  createClass(FromListDetector, [{
+    key: 'getLocales',
+    value: function getLocales() {
+      return this.locales;
+    }
+  }]);
+  return FromListDetector;
+}(Detector);
+
 var LocaleResolver = function () {
     function LocaleResolver(detectors) {
         var transformers = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
@@ -632,4 +669,4 @@ var LocaleResolver = function () {
     return LocaleResolver;
 }();
 
-export { FallbacksTransformer, IETFTransformer, InvalidLocalesTransformer, LanguageOnlyTransformer, DefaultLocaleTransformer, AllowOnlyTransformer, NavigatorDetector, UrlDetector, LocaleResolver };
+export { FallbacksTransformer, IETFTransformer, InvalidLocalesTransformer, LanguageOnlyTransformer, DefaultLocaleTransformer, AllowOnlyTransformer, NavigatorDetector, UrlDetector, FromListDetector, LocaleResolver };

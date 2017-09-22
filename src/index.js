@@ -7,7 +7,7 @@ import {
     DefaultLocaleTransformer,
     AllowOnlyTransformer,
 } from './transformers/index';
-import { NavigatorDetector, UrlDetector } from './detectors/index';
+import { NavigatorDetector, UrlDetector, FromListDetector } from './detectors/index';
 import LocaleResolver from './LocaleResolver';
 
 export {
@@ -19,5 +19,6 @@ export {
     AllowOnlyTransformer,
     NavigatorDetector,
     UrlDetector,
+    FromListDetector,
     LocaleResolver,
 };
