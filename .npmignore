@@ -7,7 +7,7 @@ tests
 bower.json
 .npmignore
 karma.conf.js
-rollup.js
+rollup.config.js
 .travis.yml
 .idea
 .gitattributes

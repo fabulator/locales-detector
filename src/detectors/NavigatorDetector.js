@@ -2,7 +2,7 @@
 import Detector from './Detector';
 
 /**
- * Navigator detector try load locales from brower navigator variable.
+ * Navigator detector try load locales from browser navigator variable.
  */
 class NavigatorDetector extends Detector {
     navigator: Navigator;
@@ -20,7 +20,7 @@ class NavigatorDetector extends Detector {
     /**
      * Get list of locales.
      *
-     * @returns {Array<string>}
+     * @returns {Array<string>} list of locales from browser
      */
     getLocales(): Array<string> {
         // $FlowFixMe

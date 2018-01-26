@@ -299,7 +299,7 @@ var IETFTransformer = function (_Transformer) {
      * Convert locales to standard IETF language tag.
      *
      * @param {Array<string>} locales - list of locales
-     * @returns {Array<string>}
+     * @returns {Array<string>} list of transformed locales
      */
 
 
@@ -497,7 +497,7 @@ var Detector = function Detector() {
 };
 
 /**
- * Navigator detector try load locales from brower navigator variable.
+ * Navigator detector try load locales from browser navigator variable.
  */
 
 var NavigatorDetector = function (_Detector) {
@@ -521,7 +521,7 @@ var NavigatorDetector = function (_Detector) {
     /**
      * Get list of locales.
      *
-     * @returns {Array<string>}
+     * @returns {Array<string>} list of locales from browser
      */
 
 
@@ -607,8 +607,6 @@ var FromListDetector = function (_Detector) {
   inherits(FromListDetector, _Detector);
 
   /**
-   * On default languages are loaded from window.navigator
-   *
    * @param {Array<string>} locales - list of locales
    */
   function FromListDetector(locales) {
@@ -621,9 +619,9 @@ var FromListDetector = function (_Detector) {
   }
 
   /**
-   * Get list of locales.
+   * Get list your of locales.
    *
-   * @returns {Array<string>}
+   * @returns {Array<string>} list of your locales
    */
 
 

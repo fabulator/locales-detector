@@ -7,6 +7,15 @@ All notable changes to this project will be documented in this file.
 ### Fixed
 ### Removed
 
+## [0.4.0] 2018-01-26
+### Changed
+- Browser for Karma testing was switched to Chromeless.
+- Update rollup config.
+- Update ESlint config.
+- Remove minified version of build file.
+- Update babel config.
+
+
 ## [0.3.0] 2017-09-22
 ### Added
 - Add new detector - FromListDetector - that allows you to set locales from array.

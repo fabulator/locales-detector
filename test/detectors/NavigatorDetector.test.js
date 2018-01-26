@@ -32,14 +32,4 @@ describe('NavigatorDetector', () => {
 
         expect(detector.getLocales()).toEqual([]);
     });
-
-    it('load navigator from window variable by default', () => {
-        window._navigator = window.navigator
-        window.navigator = {};
-        const detector = new NavigatorDetector();
-
-        expect(detector.getLocales()).toEqual([]);
-
-        window.navigator = window._navigator;
-    });
 });

@@ -8,8 +8,6 @@ class FromListDetector extends Detector {
     locales: Array<string>;
 
     /**
-     * On default languages are loaded from window.navigator
-     *
      * @param {Array<string>} locales - list of locales
      */
     constructor(locales: Array<string>) {
@@ -18,9 +16,9 @@ class FromListDetector extends Detector {
     }
 
     /**
-     * Get list of locales.
+     * Get list your of locales.
      *
-     * @returns {Array<string>}
+     * @returns {Array<string>} list of your locales
      */
     getLocales(): Array<string> {
         return this.locales;

@@ -21,7 +21,7 @@ class IETFTransformer extends Transformer {
      * Convert locales to standard IETF language tag.
      *
      * @param {Array<string>} locales - list of locales
-     * @returns {Array<string>}
+     * @returns {Array<string>} list of transformed locales
      */
     transform(locales: Array<string>): Array<string> {
         return locales.map((locale) => {

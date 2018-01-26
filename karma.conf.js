@@ -1,3 +1,5 @@
+const packpage = require('./package.json');
+
 module.exports = (config) => {
     config.set({
         preprocessors: {
@@ -17,11 +19,19 @@ module.exports = (config) => {
         },
         babelPreprocessor: {
             options: {
-                presets: ['es2015'],
+                presets: [
+                    [
+                        'env',
+                        {
+                            targets: {
+                                browsers: packpage.browserslist,
+                            },
+                        },
+                    ],
+                    'flow',
+                ],
                 plugins: [
                     'istanbul',
-                    'transform-es2015-modules-commonjs',
-                    'transform-flow-strip-types',
                     'transform-object-rest-spread',
                 ],
             },
@@ -32,7 +42,7 @@ module.exports = (config) => {
             'karma-babel-preprocessor',
             'karma-commonjs',
             'karma-jasmine',
-            'karma-phantomjs-launcher',
+            'karma-chrome-launcher',
         ],
         basePath: '',
         frameworks: ['jasmine', 'commonjs'],
@@ -61,7 +71,7 @@ module.exports = (config) => {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: false,
-        browsers: ['PhantomJS'],
+        browsers: ['ChromeHeadless'],
         singleRun: true,
         concurrency: Infinity,
     });
