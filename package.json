@@ -28,23 +28,23 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
-    "codecov": "^2.3.0",
+    "codecov": "^3.0.0",
     "eslint-config-socifi": "1.x",
-    "flow-bin": "0.54.1",
-    "flow-coverage-report": "^0.3.0",
-    "jasmine-core": "^2.5.2",
-    "karma": "^1.3.0",
+    "flow-bin": "0.69.0",
+    "flow-coverage-report": "^0.5.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
     "karma-babel-preprocessor": "^7.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-commonjs": "^1.0.0",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.1.0",
-    "rollup": "^0.50.0",
+    "rollup": "^0.57.1",
     "rollup-plugin-babel": "^3.0.2"
   },
   "dependencies": {
-    "query-string": "^5.0.0"
+    "query-string": "^6.0.0"
   },
   "scripts": {
     "lint": "node node_modules/eslint/bin/eslint.js ./src",
