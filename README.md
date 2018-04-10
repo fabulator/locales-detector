@@ -1,5 +1,7 @@
 Locales Detector
 ============
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/fabulator/locales-detector.svg)](https://greenkeeper.io/)
 ![codecov](https://img.shields.io/bower/v/locales-detector.svg) [![codecov](https://img.shields.io/npm/v/locales-detector.svg)](https://www.npmjs.com/package/locales-detector) [![codecov](https://codecov.io/gh/fabulator/locales-detector/branch/master/graph/badge.svg)](https://codecov.io/gh/fabulator/locales-detector) [![codecov](https://travis-ci.org/fabulator/locales-detector.svg?branch=master)](https://travis-ci.org/fabulator/locales-detector)
 
 This library is for detecting users locales from browser, url or some custom sources. The you can transform these languages to desired formats. 
