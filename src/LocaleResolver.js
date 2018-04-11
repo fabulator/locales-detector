@@ -15,7 +15,7 @@ class LocaleResolver {
     }
 
     getLocales(transformers: Array<Transformer> = []): Array<string> {
-        let locales = this.locales;
+        let { locales } = this;
 
         [
             ...this.transformers,
