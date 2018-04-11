@@ -39,7 +39,7 @@
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.0.2",
     "karma-junit-reporter": "^1.1.0",
-    "rollup": "^0.50.0",
+    "rollup": "^0.57.0",
     "rollup-plugin-babel": "^3.0.2"
   },
   "dependencies": {
