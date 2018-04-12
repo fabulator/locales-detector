@@ -27,20 +27,6 @@ console.log((new LocaleResolver([new NavigatorDetector()])).getLocales());
 // output ['es', 'en]
 ```
 
-You can also install it as bower package:
-```sh
-bower install locales-detector
-```
-
-and use is very similar as in npm
-```js
-var LocaleResolver = LocalesDetector.LocaleResolver;
-var NavigatorDetector = LocalesDetector.NavigatorDetector;
-
-console.log((new LocaleResolver([new NavigatorDetector()])).getLocales());
-// output ['es', 'en]
-```
-
 It can be also used with RequireJS, CommonJS, Browserify or Webpack.
 
 ## LocaleResolver
