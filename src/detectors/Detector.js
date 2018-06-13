@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 
 /**
  * Detector classes obtain list of user's locales. It can be from browser, url, cookies, storage, ... whatever you want

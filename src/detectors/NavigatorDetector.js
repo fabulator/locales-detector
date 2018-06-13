@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 import Detector from './Detector';
 
 /**
  * Navigator detector try load locales from browser navigator variable.
  */
-class NavigatorDetector extends Detector {
+export default class NavigatorDetector extends Detector {
     navigator: Navigator;
 
     /**
@@ -41,5 +41,3 @@ class NavigatorDetector extends Detector {
         return [];
     }
 }
-
-export default NavigatorDetector;

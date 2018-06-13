@@ -1,11 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
-## [Unreleased]
-### Added
+## [1.0.0] 2018-06-13
 ### Changed
-### Fixed
-### Removed
+- Release v1
+
 
 ## [0.4.0] 2018-01-26
 ### Changed

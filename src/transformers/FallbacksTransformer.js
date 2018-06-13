@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 import Transformer from './Transformer';
 
 /**
@@ -6,7 +6,7 @@ import Transformer from './Transformer';
  * 'en-US-east' => ['en-US-east', 'en-US', 'en']
  * 'es-ES' => ['es-ES', 'es']
  */
-class FallbacksTransformer extends Transformer {
+export default class FallbacksTransformer extends Transformer {
     /**
      * Add fallbacks to locales. Locales should be in IETF language tag format.
      *
@@ -26,5 +26,3 @@ class FallbacksTransformer extends Transformer {
         }).reduce((a, b) => a.concat(b), []);
     }
 }
-
-export default FallbacksTransformer;

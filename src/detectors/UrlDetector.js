@@ -1,11 +1,11 @@
-// @flow
+// @flow strict
 import queryString from 'query-string';
 import Detector from './Detector';
 
 /**
  * This detector load locales from GET parameters. The value should be locale separated list.
  */
-class UrlDetector extends Detector {
+export default class UrlDetector extends Detector {
     location: Location;
     parameter: string;
 
@@ -36,5 +36,3 @@ class UrlDetector extends Detector {
         return [];
     }
 }
-
-export default UrlDetector;

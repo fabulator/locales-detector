@@ -1,9 +1,0 @@
-{
-    "extends": [
-        "plugin:jasmine/recommended"
-    ],
-    "rules": {
-        "no-console": 0,
-        "prefer-template": 0
-    }
-}

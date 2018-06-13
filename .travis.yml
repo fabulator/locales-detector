@@ -8,11 +8,13 @@ install:
     - npm run flow-init
     - npm install -g codecov
 script:
-    - npm run js-lint-export
+    - npm run lint-export
     - npm run test
     - npm run flow
 after_success:
   - codecov
+notifications:
+  email: false
 sudo: required
 deploy:
   provider: npm

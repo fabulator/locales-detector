@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 import Transformer from './Transformer';
 
 /**
  * This transformer allows you to append default locale.
  */
-class DefaultLocaleTransformer extends Transformer {
+export default class DefaultLocaleTransformer extends Transformer {
     defaultLocale: string;
 
     /**
@@ -38,5 +38,3 @@ class DefaultLocaleTransformer extends Transformer {
         ];
     }
 }
-
-export default DefaultLocaleTransformer;

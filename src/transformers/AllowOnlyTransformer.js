@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 import Transformer from './Transformer';
 
 /**
  * This transformer allows you to filter locales
  */
-class AllowOnlyTransformer extends Transformer {
+export default class AllowOnlyTransformer extends Transformer {
     allowedLocales: Array<string>;
 
     /**
@@ -29,5 +29,3 @@ class AllowOnlyTransformer extends Transformer {
         });
     }
 }
-
-export default AllowOnlyTransformer;

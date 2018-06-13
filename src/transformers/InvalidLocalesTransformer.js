@@ -1,4 +1,4 @@
-// @flow
+// @flow strict
 import Transformer from './Transformer';
 
 type SimpleObject = {[string]: string};
@@ -13,7 +13,7 @@ const defaultConvertTable: SimpleObject = {
 /**
  * It convert invalid locales.
  */
-class InvalidLocalesTransformer extends Transformer {
+export default class InvalidLocalesTransformer extends Transformer {
     convertTable: SimpleObject;
 
     /**
@@ -38,5 +38,3 @@ class InvalidLocalesTransformer extends Transformer {
         });
     }
 }
-
-export default InvalidLocalesTransformer;

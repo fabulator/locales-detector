@@ -1,8 +1,8 @@
-// @flow
+// @flow strict
 import Detector from './detectors/Detector';
 import Transformer from './transformers/Transformer';
 
-class LocaleResolver {
+export default class LocaleResolver {
     locales: Array<string>;
     transformers: Array<Transformer>;
 
@@ -29,5 +29,3 @@ class LocaleResolver {
         });
     }
 }
-
-export default LocaleResolver;

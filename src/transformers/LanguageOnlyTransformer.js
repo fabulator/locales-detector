@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 import Transformer from './Transformer';
 
 /**
  * Transform all locales to languages only with region variant.
  */
-class LanguageOnlyTransformer extends Transformer {
+export default class LanguageOnlyTransformer extends Transformer {
     /**
      * Transform locales to languages only with region variant.
      *
@@ -17,5 +17,3 @@ class LanguageOnlyTransformer extends Transformer {
         });
     }
 }
-
-export default LanguageOnlyTransformer;

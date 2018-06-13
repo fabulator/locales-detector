@@ -1,6 +1,6 @@
 {
   "name": "locales-detector",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "description": "Tool for detecting locales of visitors and transform them.",
   "keywords": [
     "locale",
@@ -27,8 +27,8 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-flow": "^6.23.0",
-    "eslint-config-socifi": "^1.5.0",
-    "flow-bin": "0.70.0",
+    "@socifi/eslint-config": "^1.5.0",
+    "flow-bin": "^0.74.0",
     "flow-coverage-report": "^0.5.0",
     "flow-typed": "^2.4.0",
     "jasmine-core": "^3.0.0",
@@ -46,18 +46,17 @@
     "query-string": "^6.0.0"
   },
   "scripts": {
-    "js-lint": "node node_modules/eslint/bin/eslint.js ./src",
-    "js-lint-export": "node node_modules/eslint/bin/eslint.js ./src -o ./tests/checkstyle/checkstyle.xml -f checkstyle",
-    "test": "node node_modules/karma/bin/karma start karma.conf.js",
-    "flow": "node node_modules/flow-bin/vendor/flow",
-    "flow-init": "node node_modules/flow-typed/dist/cli.js install query-string@6.x",
-    "flow-coverage": "node node_modules/flow-coverage-report/bin/flow-coverage-report.js -f \"node_modules\\flow-bin\\vendor\\flow\" -i \"src/**/*.js\" -t html -t text -t json -o tests/coverage/flow",
-    "build": "node node_modules/rollup/bin/rollup --config ./rollup.config.js",
+    "lint": "eslint ./src",
+    "lint-export": "npm run lint -- -o ./tests/checkstyle/checkstyle.xml -f checkstyle",
+    "test": "karma start karma.conf.js",
+    "flow": "flow",
+    "flow-init": "flow-typed install query-string@6.x",
+    "flow-coverage": "flow-coverage-report -f \"node_modules\\flow-bin\\vendor\\flow\" -i \"src/**/*.js\" -t html -t text -t json -o tests/coverage/flow",
+    "build": "rollup --config ./rollup.config.js",
     "prepublishOnly": "npm run build"
   },
   "browserslist": [
     "> 1%",
-    "Last 2 versions",
     "not ie <= 10",
     "not ie_mob <= 10"
   ]

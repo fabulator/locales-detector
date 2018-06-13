@@ -1,3 +1,4 @@
+// @flow strict
 import FallbacksTransformer from './FallbacksTransformer';
 import IETFTransformer from './IETFTransformer';
 import InvalidLocalesTransformer from './InvalidLocalesTransformer';

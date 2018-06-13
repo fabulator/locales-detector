@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 import Detector from './Detector';
 
 /**
  * With FromListDetector you can set locales by your own.
  */
-class FromListDetector extends Detector {
+export default class FromListDetector extends Detector {
     locales: Array<string>;
 
     /**
@@ -24,5 +24,3 @@ class FromListDetector extends Detector {
         return this.locales;
     }
 }
-
-export default FromListDetector;

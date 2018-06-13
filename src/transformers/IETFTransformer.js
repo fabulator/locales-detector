@@ -1,10 +1,10 @@
-// @flow
+// @flow strict
 import Transformer from './Transformer';
 
 /**
  * This transformer convert locales to standard IETF language tag.
  */
-class IETFTransformer extends Transformer {
+export default class IETFTransformer extends Transformer {
     localeSeparator: string;
 
     /**
@@ -31,5 +31,3 @@ class IETFTransformer extends Transformer {
         });
     }
 }
-
-export default IETFTransformer;
