@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.1.0] 2018-08-15
+### Changed
+- Upgrade building tools
+
+
 ## [1.0.0] 2018-06-13
 ### Changed
 - Release v1

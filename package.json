@@ -1,6 +1,6 @@
 {
   "name": "locales-detector",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Tool for detecting locales of visitors and transform them.",
   "keywords": [
     "locale",
@@ -18,42 +18,29 @@
     "url": "https://github.com/fabulator"
   },
   "homepage": "https://github.com/fabulator/locales-detector",
-  "main": "dist/locales-detector.js",
-  "jsnext:main": "dist/locales-detector.es.js",
+  "main": "dist/index.js",
+  "jsnext:main": "dist/index.es.js",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-plugin-external-helpers": "^6.22.0",
-    "babel-plugin-istanbul": "^4.1.5",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-flow": "^6.23.0",
-    "@socifi/eslint-config": "^1.5.0",
+    "@socifi/eslint-config": "^1.10.0",
+    "@socifi/jest-config": "^1.9.0",
+    "@socifi/rollup-config": "^1.10.0",
     "flow-bin": "^0.78.0",
     "flow-coverage-report": "^0.5.0",
-    "flow-typed": "^2.4.0",
-    "jasmine-core": "^3.0.0",
-    "karma": "^3.0.0",
-    "karma-babel-preprocessor": "^7.0.0",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-commonjs": "^1.0.0",
-    "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-junit-reporter": "^1.1.0",
-    "rollup": "^0.64.0",
-    "rollup-plugin-babel": "^3.0.2"
+    "flow-typed": "^2.4.0"
   },
   "dependencies": {
-    "query-string": "^6.0.0"
+    "query-string": "^6.1.0"
   },
   "scripts": {
     "lint": "eslint ./src",
     "lint-export": "npm run lint -- -o ./tests/checkstyle/checkstyle.xml -f checkstyle",
-    "test": "karma start karma.conf.js",
+    "test": "jest",
+    "test-build": "npm run test -- --config jest.config.build.js",
     "flow": "flow",
-    "flow-init": "flow-typed install query-string@6.x",
+    "flow-init": "flow-typed install query-string@6.x jest@22.x",
     "flow-coverage": "flow-coverage-report -f \"node_modules\\flow-bin\\vendor\\flow\" -i \"src/**/*.js\" -t html -t text -t json -o tests/coverage/flow",
     "build": "rollup --config ./rollup.config.js",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build && npm run test-build"
   },
   "browserslist": [
     "> 1%",
