@@ -29,7 +29,7 @@ export default class UrlDetector extends Detector {
     getLocales(): Array<string> {
         const locales = queryString.parse(this.location.search)[this.parameter] || null;
 
-        if (locales) {
+        if (typeof locales === 'string') {
             return locales.split(',');
         }
 
