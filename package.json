@@ -22,14 +22,14 @@
   "jsnext:main": "dist/index.es.js",
   "devDependencies": {
     "@socifi/eslint-config": "^1.10.0",
-    "@socifi/jest-config": "^1.9.0",
+    "@socifi/jest-config": "^1.10.0",
     "@socifi/rollup-config": "^1.10.0",
-    "flow-bin": "^0.79.0",
-    "flow-coverage-report": "^0.5.0",
-    "flow-typed": "^2.4.0"
+    "flow-bin": "^0.83.0",
+    "flow-coverage-report": "^0.6.0",
+    "flow-typed": "^2.5.1"
   },
   "dependencies": {
-    "query-string": "^6.1.0"
+    "query-string": "^6.2.0"
   },
   "scripts": {
     "lint": "eslint ./src",
