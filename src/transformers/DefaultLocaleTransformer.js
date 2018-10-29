@@ -23,7 +23,7 @@ export default class DefaultLocaleTransformer extends Transformer {
      * @returns {Array<string>} locales with default
      */
     transform(locales: Array<string>): Array<string> {
-        return [
+        const transformedLocales = [
             ...locales.map((locale) => {
                 const splitedLocale = locale.split('-');
                 return splitedLocale.map((value, index) => {
@@ -36,5 +36,8 @@ export default class DefaultLocaleTransformer extends Transformer {
             }).reduce((a, b) => a.concat(b), []),
             ...[this.defaultLocale],
         ];
+
+        // slice locales that comes after default locale
+        return transformedLocales.slice(0, transformedLocales.indexOf(this.defaultLocale) + 1);
     }
 }

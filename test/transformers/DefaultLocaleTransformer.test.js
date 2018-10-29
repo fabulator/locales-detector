@@ -14,4 +14,10 @@ describe('DefaultLocaleTransformer', () => {
             'cs', 'en',
         ]);
     });
+
+    it('after default locale transformer there should be nothing', () => {
+        expect(transformer.transform(['en', 'cs'])).toEqual([
+            'en',
+        ]);
+    });
 });
