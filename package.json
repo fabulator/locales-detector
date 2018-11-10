@@ -1,6 +1,6 @@
 {
   "name": "locales-detector",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Tool for detecting locales of visitors and transform them.",
   "keywords": [
     "locale",
@@ -17,6 +17,7 @@
     "email": "michal@ozogan.eu",
     "url": "https://github.com/fabulator"
   },
+  "sideEffects": false,
   "homepage": "https://github.com/fabulator/locales-detector",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
