@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] 2018-11-10
+### Changed
+- Migrate to typescript
+
 ## [1.1.1] 2018-10-29
 ### Fixed
 - Slice un-need locales from default transformer

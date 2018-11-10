@@ -1,4 +1,4 @@
-import getConfig from '@socifi/rollup-config';
+import { getDirectoryConfig } from '@socifi/rollup-config';
 import path from 'path';
 
-export default getConfig(undefined, path.resolve(__dirname, 'src'));
+export default getDirectoryConfig(path.resolve(__dirname, 'src'));

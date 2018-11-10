@@ -19,32 +19,25 @@
   },
   "homepage": "https://github.com/fabulator/locales-detector",
   "main": "dist/index.js",
-  "jsnext:main": "dist/index.es.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
   "devDependencies": {
-    "@socifi/eslint-config": "^1.10.0",
-    "@socifi/jest-config": "^1.10.0",
-    "@socifi/rollup-config": "^1.10.0",
-    "flow-bin": "^0.84.0",
-    "flow-coverage-report": "^0.6.0",
-    "flow-typed": "^2.5.1"
+    "@socifi/babel-config": "^0.5.2",
+    "@socifi/eslint-config": "^2.0.1",
+    "@socifi/jest-config": "^2.0.0",
+    "@socifi/rollup-config": "^2.0.1"
   },
   "dependencies": {
+    "@types/query-string": "^6.1.1",
     "query-string": "^6.2.0"
   },
   "scripts": {
-    "lint": "eslint ./src",
+    "lint": "eslint ./src ./tests --ext .ts",
     "lint-export": "npm run lint -- -o ./tests/checkstyle/checkstyle.xml -f checkstyle",
     "test": "jest",
+    "tsc": "tsc",
     "test-build": "npm run test -- --config jest.config.build.js",
-    "flow": "flow",
-    "flow-init": "flow-typed install query-string@6.x jest@22.x",
-    "flow-coverage": "flow-coverage-report -f \"node_modules\\flow-bin\\vendor\\flow\" -i \"src/**/*.js\" -t html -t text -t json -o tests/coverage/flow",
     "build": "rollup --config ./rollup.config.js",
-    "prepublishOnly": "npm run build && npm run test-build"
-  },
-  "browserslist": [
-    "> 1%",
-    "not ie <= 10",
-    "not ie_mob <= 10"
-  ]
+    "prepublishOnly": "npm run build && npm run tsc && npm run test-build"
+  }
 }
