@@ -6,7 +6,7 @@ install:
     - npm install -g codecov
 script:
     - npm run lint
-    - npm run tests
+    - npm run test
     - npm run tsc
 after_success:
   - codecov
