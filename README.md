@@ -19,11 +19,9 @@ npm install locales-detector --save
 and use it in you project:
 
 ```js
-var localesDetector = require('locales-detector');
-var LocaleResolver = localesDetector.LocaleResolver;
-var NavigatorDetector = localesDetector.NavigatorDetector;
+const { LocaleResolver, DETECTORS } = require('locales-detector');
 
-console.log((new LocaleResolver([new NavigatorDetector()])).getLocales());
+console.log((new LocaleResolver([new DETECTORS.NavigatorDetector()])).getLocales());
 // output ['es', 'en]
 ```
 
@@ -38,16 +36,13 @@ Detectors are classes that can detect users locales. It always return array of l
 Prebuild decetors are NavigatorDetector and UrlDetector:
 
 ```js
-var localesDetector = require('locales-detector');
-var LocaleResolver = localesDetector.LocaleResolver;
-var NavigatorDetector = localesDetector.NavigatorDetector;
-var UrlDetector = localesDetector.UrlDetector;
+const { LocaleResolver, DETECTORS } = require('locales-detector');
 
 // try to find lang settings in lang GET parameter
-var urlDetector = new UrlDetector('lang');
+const urlDetector = new DETECTORS.UrlDetector('lang');
 
 // try to find lang in browser settings
-var navigatorDetector = new NavigatorDetector();
+const navigatorDetector = new DETECTORS.NavigatorDetector();
 
 console.log((new LocaleResolver([urlDetector, navigatorDetector])).getLocales());
 // output ['es', 'en]
@@ -102,14 +97,8 @@ class CustomTransformer {
 In example you can see object that first load locales from url and then from browser settings. It create automatic fallbacks and convert ivalid locales.
 
 ```js
-var localesDetector = require('locales-detector');
-var LocaleResolver = localesDetector.LocaleResolver;
-var NavigatorDetector = localesDetector.NavigatorDetector;
-var UrlDetector = localesDetector.UrlDetector;
-var InvalidLocalesTransformer = localesDetector.InvalidLocalesTransformer;
-var FallbacksTransformer = localesDetector.FallbacksTransformer;
+const { LocaleResolver, DETECTORS, TRANSFORMERS } = require('locales-detector');
 
-
-console.log((new LocaleResolver([new UrlDetector('lang'), new NavigatorDetector()], [new InvalidLocalesTransformer(), new FallbacksTransformer()])).getLocales());
+console.log((new LocaleResolver([new DETECTORS.UrlDetector('lang'), new DETECTORS.NavigatorDetector()], [new TRANSFORMERS.InvalidLocalesTransformer(), new TRANSFORMERS.FallbacksTransformer()])).getLocales());
 // output ['es-419', 'es', 'en']
 ```
