@@ -10,7 +10,7 @@ export default class LanguageOnlyTransformer extends Transformer {
      * @param {Array<string>} locales - list of locales
      * @returns {Array<string>} - list of languages
      */
-    public transform(locales: Array<string>): Array<string> {
+    public transform(locales: string[]): string[] {
         return locales.map((locale) => {
             return locale.split('-')[0];
         });

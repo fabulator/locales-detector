@@ -21,7 +21,7 @@ export default class NavigatorDetector extends Detector {
      *
      * @returns {Array<string>} list of locales from browser
      */
-    public getLocales(): Array<string> {
+    public getLocales(): string[] {
         // @ts-ignore
         const { languages, language, userLanguage } = this.navigator;
 

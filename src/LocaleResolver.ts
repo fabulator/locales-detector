@@ -2,11 +2,11 @@ import Detector from './detectors/Detector';
 import Transformer from './transformers/Transformer';
 
 export default class LocaleResolver {
-    private locales: Array<string>;
+    private locales: string[];
 
-    private transformers: Array<Transformer>;
+    private transformers: Transformer[];
 
-    public constructor(detectors: Array<Detector>, transformers: Array<Transformer> = []) {
+    public constructor(detectors: Detector[], transformers: Transformer[] = []) {
         this.locales = detectors.map((detector) => {
             return detector.getLocales();
         }).reduce((a, b) => a.concat(b), []);
@@ -14,7 +14,7 @@ export default class LocaleResolver {
         this.transformers = transformers;
     }
 
-    public getLocales(transformers: Array<Transformer> = []): Array<string> {
+    public getLocales(transformers: Transformer[] = []): string[] {
         let { locales } = this;
 
         [

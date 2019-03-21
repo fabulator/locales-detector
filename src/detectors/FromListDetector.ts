@@ -4,12 +4,12 @@ import Detector from './Detector';
  * With FromListDetector you can set locales by your own.
  */
 export default class FromListDetector extends Detector {
-    private locales: Array<string>;
+    private locales: string[];
 
     /**
      * @param {Array<string>} locales - list of locales
      */
-    public constructor(locales: Array<string>) {
+    public constructor(locales: string[]) {
         super();
         this.locales = locales;
     }
@@ -19,7 +19,7 @@ export default class FromListDetector extends Detector {
      *
      * @returns {Array<string>} list of your locales
      */
-    public getLocales(): Array<string> {
+    public getLocales(): string[] {
         return this.locales;
     }
 }

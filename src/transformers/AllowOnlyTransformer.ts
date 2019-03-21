@@ -4,14 +4,14 @@ import Transformer from './Transformer';
  * This transformer allows you to filter locales
  */
 export default class AllowOnlyTransformer extends Transformer {
-    private allowedLocales: Array<string>;
+    private allowedLocales: string[];
 
     /**
      * Constructor.
      *
      * @param {Array<string>} allowedLocales - list of allowed locales
      */
-    public constructor(allowedLocales: Array<string>) {
+    public constructor(allowedLocales: string[]) {
         super();
         this.allowedLocales = allowedLocales;
     }
@@ -22,7 +22,7 @@ export default class AllowOnlyTransformer extends Transformer {
      * @param {Array<string>} locales - list of locales
      * @returns {Array<string>} allowed locales
      */
-    public transform(locales: Array<string>): Array<string> {
+    public transform(locales: string[]): string[] {
         return locales.filter((locale) => {
             return this.allowedLocales.indexOf(locale) >= 0;
         });

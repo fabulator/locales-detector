@@ -22,7 +22,7 @@ export default class DefaultLocaleTransformer extends Transformer {
      * @param {Array<string>} locales - list of locales
      * @returns {Array<string>} locales with default
      */
-    public transform(locales: Array<string>): Array<string> {
+    public transform(locales: string[]): string[] {
         const transformedLocales = [
             ...locales.map((locale) => {
                 const splitedLocale = locale.split('-');

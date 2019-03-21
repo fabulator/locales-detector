@@ -22,7 +22,7 @@ export default class IETFTransformer extends Transformer {
      * @param {Array<string>} locales - list of locales
      * @returns {Array<string>} list of transformed locales
      */
-    public transform(locales: Array<string>): Array<string> {
+    public transform(locales: string[]): string[] {
         return locales.map((locale) => {
             return locale.split(this.localeSeparator).map((value: string, index: number) => {
                 return index === 1 ? value.toUpperCase() : value.toLowerCase();

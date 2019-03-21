@@ -12,7 +12,7 @@ export default class FallbacksTransformer extends Transformer {
      * @param {Array<string>} locales - list of locales
      * @returns {Array<string>} locales with fallbacks
      */
-    public transform(locales: Array<string>): Array<string> {
+    public transform(locales: string[]): string[] {
         return locales.map((locale) => {
             const splitedLocale = locale.split('-');
             return splitedLocale.map((value, index) => {

@@ -26,7 +26,7 @@ export default class UrlDetector extends Detector {
      *
      * @returns {Array<string>} list of locales
      */
-    public getLocales(): Array<string> {
+    public getLocales(): string[] {
         const locales = parse(this.location.search)[this.parameter] || null;
 
         if (typeof locales === 'string') {

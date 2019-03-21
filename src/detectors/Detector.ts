@@ -3,5 +3,5 @@
  * Get locales method always return array of locales.
  */
 export default abstract class Detector {
-    abstract getLocales(): Array<string>;
+    abstract getLocales(): string[];
 }

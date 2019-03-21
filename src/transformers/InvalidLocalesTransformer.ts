@@ -1,6 +1,6 @@
 import Transformer from './Transformer';
 
-type SimpleObject = {[language: string]: string};
+interface SimpleObject {[language: string]: string}
 
 const defaultConvertTable: SimpleObject = {
     'es-XL': 'es-419',
@@ -31,7 +31,7 @@ export default class InvalidLocalesTransformer extends Transformer {
      * @param {Array<string>} locales - list of locales
      * @returns {Array<string>} cleaned list of locales
      */
-    public transform(locales: Array<string>): Array<string> {
+    public transform(locales: string[]): string[] {
         return locales.map((locale) => {
             return this.convertTable[locale] || locale;
         });
