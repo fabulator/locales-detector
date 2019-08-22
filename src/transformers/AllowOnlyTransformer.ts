@@ -24,7 +24,7 @@ export default class AllowOnlyTransformer extends Transformer {
      */
     public transform(locales: string[]): string[] {
         return locales.filter((locale) => {
-            return this.allowedLocales.indexOf(locale) >= 0;
+            return this.allowedLocales.includes(locale);
         });
     }
 }

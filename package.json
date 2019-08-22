@@ -29,8 +29,8 @@
     "@socifi/rollup-config": "^2.1.0"
   },
   "dependencies": {
-    "@types/query-string": "^6.2.0",
-    "query-string": "^6.8.1"
+    "@types/query-string": "^6.3.0",
+    "query-string": "^6.8.2"
   },
   "scripts": {
     "lint": "eslint ./src ./tests --ext .ts",
