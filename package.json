@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "@types/query-string": "^6.3.0",
-    "query-string": "^6.8.2"
+    "query-string": "^6.8.3"
   },
   "scripts": {
     "lint": "eslint ./src ./tests --ext .ts",
