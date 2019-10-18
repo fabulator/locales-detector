@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] 2019-10-18
+### Added
+- Support for IE11
+
 ## [2.0.0] 2018-11-10
 ### Changed
 - Migrate to typescript
