@@ -26,7 +26,7 @@
     "@socifi/babel-config": "^0.7.0",
     "@socifi/eslint-config": "^2.10.0",
     "@socifi/jest-config": "^2.4.1",
-    "@socifi/rollup-config": "^2.1.0"
+    "@socifi/rollup-config": "^2.2.2"
   },
   "dependencies": {
     "@types/query-string": "^6.3.0",
