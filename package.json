@@ -41,7 +41,7 @@
         "tsc": "tsc",
         "test:build": "npm run test -- --config jest.config.build.js",
         "build": "rollup --config ./rollup.config.js",
-        "prepublishOnly": "npm run build && npm run tsc && npm run test-build",
+        "prepublishOnly": "npm run build && npm run tsc && npm run test:build",
         "release": "semantic-release"
     }
 }
