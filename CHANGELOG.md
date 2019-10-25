@@ -1,6 +1,15 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.2.0] 2019-10-25
+### Fixed
+- [69032cc](https://github.com/fabulator/locales-detector/commit/69032cc411324c38f82620c7767d84cd525b89f5) Update dependencies.
+
+### Changed
+- [33841ad](https://github.com/fabulator/locales-detector/commit/33841ada941d218157b5386584c87242741b2721) Update dev dependency @socifi/rollup-config to ^2.2.2
+- [b4d89eb](https://github.com/fabulator/locales-detector/commit/b4d89eb0d2de074c5a5e33007310c45b4ce54dde) Update dev dependency @socifi/jest-config to ^2.4.1 
+- [87aa421](https://github.com/fabulator/locales-detector/commit/87aa4211a7d3c5a515dcdaed9fce045e9e3456b8) Update dev dependency @socifi/eslint-config to ^2.10.0 
+
 ## [2.1.0] 2019-10-18
 ### Added
 - Support for IE11
