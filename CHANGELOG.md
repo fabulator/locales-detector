@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.2.1] 2019-10-25
+### Fixed
+- [d72a18c](https://github.com/fabulator/locales-detector/commit/d72a18c7918c93270b8ddf6b904a8a342481774e) Deploying script.
+
 ## [2.2.0] 2019-10-25
 ### Fixed
 - [69032cc](https://github.com/fabulator/locales-detector/commit/69032cc411324c38f82620c7767d84cd525b89f5) Update dependencies.
