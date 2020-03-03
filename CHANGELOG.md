@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.14.0] 2020-03-03
+### Changed
+- [7133dd9](https://github.com/fabulator/locales-detector/commit/7133dd9fec68c5fa4542eae2966c455237d86bb9) Update dependency query-string to v6.11.1
+- [20ae49f](https://github.com/fabulator/locales-detector/commit/20ae49f84307b5b3ba1033ae7e332c1924947a35) Update dev dependency @socifi/eslint-config to v2.10.2 
+
 ## [2.13.0] 2020-02-14
 ### Changed
 - [f6f8ec0](https://github.com/fabulator/locales-detector/commit/f6f8ec0d287b871954f61dec895bf9ebe953a1f0) Update dependency query-string to v6.11.0
