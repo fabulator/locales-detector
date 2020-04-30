@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.19.0] 2020-04-30
+### Changed
+- [0cd4043](https://github.com/fabulator/locales-detector/commit/0cd404352d34659b038eb3e227b60103686741c3) Update dependency @babel/runtime to v7.9.6
+
 ## [2.18.0] 2020-04-13
 ### Changed
 - [d09a33b](https://github.com/fabulator/locales-detector/commit/d09a33baee6547060af06b972e9b4d8e0a9c477d) Update dependency query-string to v6.12.1
