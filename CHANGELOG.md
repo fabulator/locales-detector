@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.23.0] 2020-06-12
+### Changed
+- [8bff5c7](https://github.com/fabulator/locales-detector/commit/8bff5c792245ceface1f96e8c22fa54afdc81057) Update dependency query-string to v6.13.1
+
 ## [2.22.0] 2020-06-07
 ### Changed
 - [572df11](https://github.com/fabulator/locales-detector/commit/572df114f1ed1695750be7f18a84f7f382e4e08a) Update dependency query-string to v6.13.0
