@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v2.27.0 (2020-09-12)
+### Fixed
+- [acba8ea](https://github.com/fabulator/locales-detector/commit/acba8ea0fe4827f3421d4264ad5cec0a9f73cdbc) Security lock update
+
+### Changed
+- [ba16d74](https://github.com/fabulator/locales-detector/commit/ba16d74da585a125896fd16e454dad226f61bd11) Update dev dependency semantic-release-config-fabulator to v2 
+
 ## [2.26.0] 2020-07-15
 ### Changed
 - [834822f](https://github.com/fabulator/locales-detector/commit/834822f65c0da244ddaf5e1fb341e4241639c16a) Update dependency @babel/runtime to v7.10.5
