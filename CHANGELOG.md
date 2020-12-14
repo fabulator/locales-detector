@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v2.27.19 (2020-12-14)
+### Fixed
+- [dc501c9](https://github.com/fabulator/locales-detector/commit/dc501c9cf6212fab99d2b8a3f091cb1ab8cc77cd) Update lock for security updated
+
 ## v2.27.18 (2020-12-07)
 ### Fixed
 - [e091ec4](https://github.com/fabulator/locales-detector/commit/e091ec4fd0680b3f13f0eeafd2c6352a3164a709) Update lock for security updated
