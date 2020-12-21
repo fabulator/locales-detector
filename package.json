@@ -1,6 +1,6 @@
 {
     "name": "locales-detector",
-    "version": "2.27.19",
+    "version": "2.27.20",
     "description": "Tool for detecting locales of visitors and transform them.",
     "keywords": [
         "locale",
