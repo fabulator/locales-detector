@@ -32,7 +32,7 @@
     },
     "dependencies": {
         "@babel/runtime": "^7.6.3",
-        "query-string": "^6.8.3"
+        "query-string": "^7.0.0"
     },
     "scripts": {
         "lint": "eslint ./src ./tests --ext .ts",
