@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v3.0.0 (2021-06-06)
+### Changed
+- [caaa0c9](https://github.com/fabulator/locales-detector/commit/caaa0c976ad38442d1f4ae5af273f4480369e9f7) Update dependency query-string to v7 BREAKING (#112)
+
+Co-authored-by: Renovate Bot <bot@renovateapp.com>
+
 ## v2.27.43 (2021-05-31)
 ### Fixed
 - [033bfb8](https://github.com/fabulator/locales-detector/commit/033bfb83abd3e71eb5459fe238322f7b02a93694) Update lock for security updated
