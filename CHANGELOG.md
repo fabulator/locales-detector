@@ -1,6 +1,33 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v3.1.0 (2021-11-09)
+### Other
+- [73c139b](https://github.com/fabulator/locales-detector/commit/73c139b359c415a237c75fb2ae07b6e14db3803e) WIP
+- [cd2923a](https://github.com/fabulator/locales-detector/commit/cd2923a8d073af5fc5bb256a72540f55d89d45c5) WIP
+
+### Changed
+- [f40fb88](https://github.com/fabulator/locales-detector/commit/f40fb88c5b4b8e1f00038730caa6d34486fd6fe3) Update dependencies
+
+### Fixed
+- [ce2c8d6](https://github.com/fabulator/locales-detector/commit/ce2c8d6f3875481f003a007ade6ad5460238c728) Update lock for security updated
+- [df8f6aa](https://github.com/fabulator/locales-detector/commit/df8f6aafc4d3f57ca9cd6d80e7066364e86f954f) Update lock for security updated
+- [e80c746](https://github.com/fabulator/locales-detector/commit/e80c7467547be08b9c9bde9badff2b8e697f8150) Update lock for security updated
+- [55b0a8a](https://github.com/fabulator/locales-detector/commit/55b0a8abc1c991fc73b2cd5e291f87dc7351e6ac) Update lock for security updated
+- [93e761c](https://github.com/fabulator/locales-detector/commit/93e761c7a35684797c77795b59eb97306ce432cc) Update lock for security updated
+- [f303dac](https://github.com/fabulator/locales-detector/commit/f303dacf6b8e28289b1c4a23719d5bf9c8ba9b08) Update lock for security updated
+- [317ec08](https://github.com/fabulator/locales-detector/commit/317ec0805fbdf3bd3367b749fc57d07015c00a57) Update lock for security updated
+- [2f0bc89](https://github.com/fabulator/locales-detector/commit/2f0bc89e86ec39357a67761e355a7038b82ef82a) Update lock for security updated
+- [8b17191](https://github.com/fabulator/locales-detector/commit/8b17191b75c250d96d549b9850abed268bf4ffa5) Update lock for security updated
+- [1230542](https://github.com/fabulator/locales-detector/commit/1230542fe4ca68e9878187fba1aeb02dd928ba79) Update lock for security updated
+- [d1ed575](https://github.com/fabulator/locales-detector/commit/d1ed575e5db3fe71179b8b9ebd186969c9c2fe0e) Update lock for security updated
+- [2149b86](https://github.com/fabulator/locales-detector/commit/2149b86dceb661003bc4c4ca48ae4da66089fadd) Update lock for security updated
+- [736a7fb](https://github.com/fabulator/locales-detector/commit/736a7fb55792f59dcf7d387ec981221a9a40408e) Update lock for security updated
+- [626204c](https://github.com/fabulator/locales-detector/commit/626204c18b27a31eb13775791f5f23e1c7bac356) Update lock for security updated
+- [0801088](https://github.com/fabulator/locales-detector/commit/0801088633fcb8caa74bb53eaf332493e82cdcf0) Update lock for security updated
+- [151226d](https://github.com/fabulator/locales-detector/commit/151226d209a466e60d3834ac55ecc56c62702240) Update lock for security updated
+- [d7b702c](https://github.com/fabulator/locales-detector/commit/d7b702ca20636c2bea98dbc0b159fed11e3a16b6) Update lock for security updated
+
 ## v3.0.2 (2021-06-14)
 ### Fixed
 - [4d94b2c](https://github.com/fabulator/locales-detector/commit/4d94b2cb4f714722f05b63fde0f4d213c73a5cbf) Update lock for security updated
