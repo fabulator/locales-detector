@@ -1,12 +1,14 @@
 import Transformer from './Transformer';
 
-interface SimpleObject {[language: string]: string}
+interface SimpleObject {
+    [language: string]: string;
+}
 
 const defaultConvertTable: SimpleObject = {
     'es-XL': 'es-419',
-    hindi: 'hi',
-    indonesian: 'id',
-    english: 'en',
+    'hindi': 'hi',
+    'indonesian': 'id',
+    'english': 'en',
 };
 
 /**

@@ -1,8 +1,3 @@
 module.exports = {
-    extends: [
-        '@socifi',
-    ],
-    rules: {
-        '@typescript-eslint/ban-ts-ignore': 0,
-    },
+    extends: ['fabulator'],
 };

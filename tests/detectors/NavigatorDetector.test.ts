@@ -4,7 +4,8 @@ const { NavigatorDetector } = DETECTORS;
 
 describe('NavigatorDetector', () => {
     it('get locales from navigator variables', () => {
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const detector = new NavigatorDetector({
             languages: ['ab', 'cd'],
         });
@@ -13,7 +14,8 @@ describe('NavigatorDetector', () => {
     });
 
     it('get locale from navigator variables', () => {
-        // @ts-ignore
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         const detector = new NavigatorDetector({
             language: 'ab',
         });
@@ -23,7 +25,8 @@ describe('NavigatorDetector', () => {
 
     it('get locale from navigator variables for old browsers', () => {
         const detector = new NavigatorDetector({
-            // @ts-ignore
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             userLanguage: 'ab',
         });
 
@@ -32,7 +35,8 @@ describe('NavigatorDetector', () => {
 
     it('return empty array if language is not set', () => {
         const detector = new NavigatorDetector({
-            // @ts-ignore
+            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+            // @ts-expect-error
             userLanguage: null,
         });
 

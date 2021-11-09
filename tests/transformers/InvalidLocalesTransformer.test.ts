@@ -4,11 +4,7 @@ describe('InvalidLocalesTransformer', () => {
     it('convert invalid locales', () => {
         const transformer = new TRANSFORMERS.InvalidLocalesTransformer();
 
-        expect(transformer.transform([
-            'es-XL', 'es',
-        ])).toEqual([
-            'es-419', 'es',
-        ]);
+        expect(transformer.transform(['es-XL', 'es'])).toEqual(['es-419', 'es']);
     });
 
     it('accept custom set of invali langs', () => {
@@ -16,10 +12,6 @@ describe('InvalidLocalesTransformer', () => {
             cestina: 'cs',
         });
 
-        expect(transformer.transform([
-            'cestina',
-        ])).toEqual([
-            'cs',
-        ]);
+        expect(transformer.transform(['cestina'])).toEqual(['cs']);
     });
 });

@@ -13,15 +13,17 @@ export default class FallbacksTransformer extends Transformer {
      * @returns {Array<string>} locales with fallbacks
      */
     public transform(locales: string[]): string[] {
-        return locales.map((locale) => {
+        return locales.flatMap((locale) => {
             const splitedLocale = locale.split('-');
-            return splitedLocale.map((value, index) => {
-                const localeGenerator = [];
-                for (let i = 0; i <= index; i++) {
-                    localeGenerator.push(splitedLocale[i]);
-                }
-                return localeGenerator.join('-');
-            }).reverse();
-        }).reduce((a, b) => a.concat(b), []);
+            return splitedLocale
+                .map((value, index) => {
+                    const localeGenerator = [];
+                    for (let i = 0; i <= index; i++) {
+                        localeGenerator.push(splitedLocale[i]);
+                    }
+                    return localeGenerator.join('-');
+                })
+                .reverse();
+        });
     }
 }

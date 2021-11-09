@@ -22,6 +22,7 @@ export default class NavigatorDetector extends Detector {
      * @returns {Array<string>} list of locales from browser
      */
     public getLocales(): string[] {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
         const { languages, language, userLanguage } = this.navigator;
 

@@ -24,9 +24,12 @@ export default class IETFTransformer extends Transformer {
      */
     public transform(locales: string[]): string[] {
         return locales.map((locale) => {
-            return locale.split(this.localeSeparator).map((value: string, index: number) => {
-                return index === 1 ? value.toUpperCase() : value.toLowerCase();
-            }).join('-');
+            return locale
+                .split(this.localeSeparator)
+                .map((value: string, index: number) => {
+                    return index === 1 ? value.toUpperCase() : value.toLowerCase();
+                })
+                .join('-');
         });
     }
 }

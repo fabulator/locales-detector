@@ -1,4 +1,5 @@
-import { getDirectoryConfig } from '@socifi/rollup-config';
-import path from 'path';
+import { getConfig } from 'rollup-config-fabulator';
 
-export default getDirectoryConfig(path.resolve(__dirname, 'src'));
+process.env.NODE_ENV = 'BUILD';
+
+export default getConfig('./src/index.ts');
