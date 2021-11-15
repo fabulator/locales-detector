@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v3.1.1 (2021-11-15)
+### Fixed
+- [499a6d5](https://github.com/fabulator/locales-detector/commit/499a6d50a233d9b762bc4e600fa9e040b3b6fd67) Update lock for security updated
+
 ## v3.1.0 (2021-11-09)
 ### Other
 - [73c139b](https://github.com/fabulator/locales-detector/commit/73c139b359c415a237c75fb2ae07b6e14db3803e) WIP
